@@ -1,0 +1,61 @@
+<nav class="bg-gray-900 fixed w-full z-20 top-0 start-0 border-b border-gray-600">
+    <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto px-4 py-8">
+        <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+            <img src="https://flowbite.com/docs/images/logo.svg" class="h-8" alt="Flowbite Logo">
+            <span class="self-center text-2xl font-semibold whitespace-nowrap text-white">ExpressHire</span>
+        </a>
+        <div class="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse gap-5">
+            <a routerLink="/"
+                class="text-white focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">
+                Home
+            </a>
+
+            <a routerLink="/register"
+                class="text-white focus:ring-4 focus:outline-none  font-medium rounded-lg text-sm px-4 py-2 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">
+                Register
+            </a>
+
+        </div>
+    </div>
+</nav>
+
+<div class="w-full h-[100vh] flex justify-center align-middle items-center m-auto">
+    <div id="content" role="main" class="w-full max-w-md mx-auto p-6 mt-5">
+        <div class="mt-7 bg-white  rounded-xl shadow-lg  border-2 border-indigo-300">
+            <div class="p-4 sm:p-7">
+                <div class="text-center">
+                    <h1 class="block text-2xl font-bold text-gray-800 ">Interviewer Login</h1>
+                </div>
+
+                <div class="mt-5">
+                    <form (ngSubmit)="InterviewerLogin()">
+                        <div class="grid gap-y-4">
+                            <div>
+                                <label for="email" class="block text-base font-bold ml-1 mb-2 ">Email
+                                    address</label>
+                                <div class="relative">
+                                    <input type="email" id="email" name="email"
+                                        class="py-3 px-4 block w-full border-2 border-gray-200 rounded-md text-base focus:border-blue-500 focus:ring-blue-500 shadow-sm"
+                                        [(ngModel)]="email" required>
+                                </div>
+                            </div>
+                            <div>
+                                <label class="block text-base font-bold ml-1 mb-2 ">Password</label>
+                                <div class="relative">
+                                    <input type="password" name="password"
+                                        class="py-3 px-4 block w-full border-2 border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 shadow-sm"
+                                        [(ngModel)]="password" required>
+                                </div>
+                                <p class="hidden text-xs text-red-600 mt-2" id="invalid-key">Invalid credintials!
+                                </p>
+                            </div>
+                            <button type="submit"
+                                class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-600 text-white hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-600 focus:ring-offset-2 transition-all text-sm ">Login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>

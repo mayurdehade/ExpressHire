@@ -1,0 +1,35 @@
+<div class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <div class="media-container w-full max-w-lg p-6 bg-white rounded-lg shadow-lg text-center">
+        <h1 class="text-2xl font-bold mb-4">Camera and Microphone Test</h1>
+
+        <!-- Video container -->
+        <div class="relative w-full h-80 mb-4">
+            <video id="videoElement" class="w-full h-full object-cover border-2 border-gray-300 rounded-lg" autoplay
+                muted playsinline></video>
+        </div>
+
+        <!-- Microphone visualization container -->
+        <div class="w-full h-2 bg-gray-200 rounded">
+            <div id="audioBar" class="h-2 bg-green-500 transition-all rounded"></div>
+        </div>
+
+        <!-- Status indicators -->
+        <div class="flex justify-around text-lg mt-3 font-medium">
+            <div id="videoStatus" class="text-green-500">Camera: Enabled</div>
+            <div id="audioStatus" class="text-green-500">Mic: Enabled</div>
+        </div>
+
+        <!-- Error message -->
+        <p id="error-message" class="text-red-500 mt-4 hidden"></p>
+
+        <div *ngIf="nextButton" class="mt-10">
+            <a routerLink="/interview"
+                class="text-white focus:ring-4 focus:outline-none  font-medium rounded-xl text-lg px-10 py-2 text-center bg-blue-600 hover:bg-blue-700 focus:ring-blue-800">
+                Start Interview
+            </a>
+        </div>
+    </div>
+
+
+</div>

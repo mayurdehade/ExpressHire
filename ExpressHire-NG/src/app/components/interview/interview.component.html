@@ -1,0 +1,24 @@
+<div class="flex flex-col h-screen p-6 bg-gray-100">
+    <div class="flex justify-between mb-4">
+        <div>
+            <h1 class="text-2xl font-bold text-gray-800">Interview Question:</h1>
+            <p class="mt-2 text-lg text-gray-600">Describe your experience with JavaScript frameworks and how you’ve used
+                them in your projects.</p>
+        </div>
+        <div class="">
+            <video id="userVideo" class="w-60 h-auto rounded-lg shadow-lg border-2 border-gray-200"
+                autoplay muted></video>
+        </div>
+    </div>
+
+    <div class="flex-grow mb-4">
+        <h2 class="text-xl font-bold text-gray-800">Live Transcript:</h2>
+        <div id="transcript"
+            class="mt-2 p-4 h-48 overflow-auto bg-white rounded-lg shadow-md text-gray-700 border border-gray-200">
+            <p>{{ text || 'The recognized text will appear here...' }}</p>
+        </div>
+    </div>
+
+    <!-- <button (click)="startListening()">Start Listening</button>
+    <button (click)="stopListening()">Stop Listening</button> -->
+</div>
