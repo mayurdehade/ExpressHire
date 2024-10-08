@@ -12,9 +12,10 @@ import { SheduleinterviewComponent } from './components/sheduleinterview/shedule
 import { CandidatedetailsComponent } from './components/candidatedetails/candidatedetails.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { RegisterComponent } from './components/register/register.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ResultsComponent } from './components/results/results.component';
 import { CheckSystemComponent } from './components/check-system/check-system.component';
+import { HttpClientModule } from '@angular/common/http';
 
 @NgModule({
   declarations: [
@@ -31,7 +32,7 @@ import { CheckSystemComponent } from './components/check-system/check-system.com
     ResultsComponent,
     CheckSystemComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule, FormsModule],
+  imports: [BrowserModule, AppRoutingModule, FormsModule, HttpClientModule, ReactiveFormsModule],
   providers: [],
   bootstrap: [AppComponent],
 })
